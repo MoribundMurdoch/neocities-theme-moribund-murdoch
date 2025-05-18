@@ -1,0 +1,220 @@
+/* ========== Global Styles ========== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IM Fell English', serif;
+    line-height: 1.6;
+    color: #ECECEB; /* light text */
+    background: #080808 url('https://moribundmurdoch.neocities.org/images/booksbackgroundwavy.gif') repeat;
+    background-size: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== Typography ========== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #ECECEB; /* light headings */
+    font-family: 'IM Fell English', serif;
+}
+
+h1 { font-size: 2.5em; margin: 20px 0; }
+h2 { font-size: 2em;   margin: 18px 0; }
+h3 { font-size: 1.75em; margin: 16px 0; }
+h4 { font-size: 1.5em; margin: 14px 0; }
+h5 { font-size: 1.25em; margin: 12px 0; }
+h6 { font-size: 1em; margin: 10px 0; }
+
+p {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #ECECEB;
+    font-family: 'IM Fell English', serif;
+}
+
+a {
+    color: #BEBEBE; /* subtle light gray links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'IM Fell English', serif;
+}
+
+a:hover {
+    color: #ECECEB; /* brighter on hover */
+    text-decoration: underline;
+}
+
+/* ========== Lists ========== */
+ul, ol {
+    margin: 10px 0;
+    padding-left: 20px;
+    color: #ECECEB;
+    font-family: 'IM Fell English', serif;
+}
+
+/* ========== Blockquotes ========== */
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 4px solid #ECECEB;
+    color: #ECECEB;
+    font-family: 'IM Fell English', serif;
+}
+
+/* ========== Code ========== */
+code {
+    font-family: monospace;
+    background-color: #181818; /* dark gray code bg */
+    color: #ECECEB;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* ========== Utility Classes ========== */
+.small-text  { font-size: 0.875em; font-family: 'IM Fell English', serif; color: #ECECEB; }
+.large-text  { font-size: 1.125em; font-family: 'IM Fell English', serif; color: #ECECEB; }
+.center-text { text-align: center; font-family: 'IM Fell English', serif; color: #ECECEB; }
+
+/* ========== Header ========== */
+#header-container {
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'IM Fell English', serif;
+}
+
+#box1 {
+    margin-top: 50px;
+    font-family: 'IM Fell English', serif;
+}
+
+#header {
+    width: 100%;
+    height: 170px;
+    background-color: rgba(12, 12, 12, 0.95); /* near black */
+    border: 2px solid #fbfbf9; /* subtle gray border */
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(40, 40, 40, 0.8);
+    font-family: 'IM Fell English', serif;
+
+    display: flex;           /* enable flexbox */
+    align-items: center;     /* vertical centering */
+    justify-content: center; /* horizontal centering */
+}
+
+/* Optional: style the profile photo inside the header */
+#header img {
+    max-height: 130px;  /* keep it contained vertically */
+    width: auto;
+    border-radius: 50%; /* make it a circle */
+    z-index: 2;         /* make sure it sits above other stuff */
+}
+
+/* If you want to keep overlay-image for something else: */
+.overlay-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: auto;
+    z-index: 1;
+    font-family: 'IM Fell English', serif;
+}
+
+
+/* ========== Navigation ========== */
+#linkity {
+    position: absolute;
+    top: 3px;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    z-index: 1;
+    border-radius: 5px;
+    font-family: 'IM Fell English', serif;
+}
+
+#linkity a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(6, 6, 6, 1); 
+    color: #ECECEB;
+    border-radius: 10px 10px 0 0;
+    letter-spacing: 1px;
+    border: 2px solid #fbfbf9;
+    white-space: nowrap;
+    text-transform: capitalize;
+    transition: background-color 0.4s, border-bottom 0.4s;
+    font-family: 'IM Fell English', serif;
+}
+
+#linkity a:hover {
+    background-color: rgba(100, 100, 100, 0.6);
+    border-bottom: 1px solid #ECECEB;
+}
+
+/* ========== Layout ========== */
+.content-wrapper {
+    max-width: 1344px;
+    margin: 100px auto 0;
+    padding: 20px;
+    display: flex;
+    font-family: 'IM Fell English', serif;
+    color: #ECECEB;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #111111; /* very dark gray */
+    border-radius: 8px;
+    border: 2px solid #fbfbf9;
+    box-sizing: border-box;
+    font-family: 'IM Fell English', serif;
+    color: #ECECEB;
+}
+
+/* ========== Footer ========== */
+.footer-container {
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgba(12, 12, 12, 0.95); 
+    color: #ECECEB;
+    padding: 30px 0;
+    border: 2px solid #fbfbf9;
+     box-shadow: 0 0 10px rgba(40, 40, 40, 0.8);
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-family: 'IM Fell English', serif;
+}
+
+.footer-container a {
+    color: #ECECEB;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'IM Fell English', serif;
+}
+
+.footer-container a:hover {
+    color: #FFFFFF;
+}
+
+.footer-column a:last-of-type {
+    margin-top: 15px;
+    display: inline-block;
+    font-family: 'IM Fell English', serif;
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: #ECECEB;
+    font-family: 'IM Fell English', serif;
+}
