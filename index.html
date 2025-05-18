@@ -67,7 +67,48 @@
     </div>
   </div>
 
-  <div class="content-wrapper">
+ <div class="content-wrapper">
+
+  <div class="twitch-section">
+    <p>
+      Tune in to MoribundMurdoch's live sessions—where digital ramblings, freelance work,
+      and esoteric commentary converge in real time. Whether it's a quiet financial hustle
+      or a chaotic media deep-dive, you're welcome to watch, lurk, or chat.
+    </p>
+
+    <div class="twitch-embed-wrapper">
+
+      <!-- Twitch Chat Embed (on the left) -->
+      <iframe
+        id="twitch-chat-embed"
+        src="https://www.twitch.tv/embed/moribundmurdoch/chat?parent=moribundmurdoch.neocities.org"
+        height="480"
+        width="350">
+      </iframe>
+
+      <!-- Twitch Video Embed (on the right) -->
+      <div id="twitch-embed"></div>
+
+    </div>
+
+    <!-- Load Twitch Embed Script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script type="text/javascript">
+      var embed = new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "moribundmurdoch",
+        layout: "video",
+        autoplay: false,
+        parent: ["moribundmurdoch.neocities.org"]
+      });
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    </script>
+
     <p>
       Explore curated YouTube playlists meticulously organized using the Dewey Decimal System by MoribundMurdoch.
       Dive into a uniquely structured video library that makes discovering content intuitive and engaging.
@@ -77,6 +118,9 @@
       </a> to explore the full collection and learn more.
     </p>
   </div>
+
+</div>
+
 
   <footer class="footer-container">
     <div class="footer-column">
